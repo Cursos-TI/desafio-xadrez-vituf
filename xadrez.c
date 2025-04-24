@@ -42,20 +42,20 @@ int main() {
 
     printf("Cavalo: \n");
 
+    int cavaloV = 0, cavaloH = 0;
     // loop aninhados para o cavalo.
-    for (int cavalo = 0; cavalo < 1; cavalo++)// loop para o cavalo ir para a esquerda uma vez.
+    while (cavaloH <= 1)// loop para o cavalo ir para a direita uma vez.
     {
-        do//loop para o cavalo ir para baixo 2 vezes.
+        do//loop para o cavalo ir para cima 2 vezes.
         {
-            printf("Baixo\n");// printf do movimento do cavalo.
-            cavalo++;
-        } while (cavalo <= 1);
+            printf("Cima\n");// printf do movimento do cavalo.
+            cavaloV++;
+        } while (cavaloV <= 1);
 
-        printf("Esquerda\n");// printf do movimento do cavalo.
-        
+        printf("Direita\n");// printf do movimento do cavalo.
+        cavaloH++;
+        break;
     }
-    
-    
-    
+ 
     return 0;
 }
