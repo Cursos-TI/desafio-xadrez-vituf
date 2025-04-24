@@ -1,36 +1,27 @@
 #include <stdio.h>
 
-void movimentotorre(int numero)// void dos movimentos das peças.
+void movimentotorre(int numero)// recursividade dos movimentos da torre.
 {
     if (numero >= 1)
     {
-        movimentotorre(numero - 1);// movimento tira -1 a cada ação da peça.
+        movimentotorre(numero - 1);// movimento tira -1 a cada ação da torre.
         printf("Direita\n");
     }   
 }
 
-void movimentorainha(int numero)
+void movimentorainha(int numero)// recursividade dos movimentos da rainha.
 {
     if (numero >=1)
     {
-        movimentorainha(numero -1);
+        movimentorainha(numero -1);// movimento tira -1 a cada ação da rainha.
         printf("Esquerda\n");
     }
     
 }
-int main() {
-    
-    printf("Torre: \n");
 
-    // loop recursividade da torre.
-    int torre = 5;
-    movimentotorre(torre);
-    
-    printf("\n");
-
+void movimentobispo(int numero)// recursividade dos movimentos da bispo.
+{
     int bispoV, bispoH;// variável do bispo
-
-    printf("Bispo: \n");
     // loop aninhado para o bispo se mover na diagonal.
     for (bispoV = 1; bispoV <= 5; bispoV++)// loop para o bispo mover para cima 5 vezes.
     {
@@ -41,7 +32,23 @@ int main() {
         }
         printf("Cima\n");// printf para o movimento do bispo.
     }
+}
+
+
+int main() {
     
+    printf("Torre: \n");
+
+    // loop recursividade da torre.
+    int torre = 5;
+    movimentotorre(torre);
+    
+    printf("\n");
+
+    int bispo;// variável do bispo
+    // recursividade do bispo.
+    printf("Bispo: \n");
+    movimentobispo(bispo);
 
     printf("\n");
 
