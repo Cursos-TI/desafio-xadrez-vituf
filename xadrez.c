@@ -1,42 +1,54 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+void movimentotorre(int numero)// void dos movimentos das peças.
+{
+    if (numero >= 1)
+    {
+        movimentotorre(numero - 1);// movimento tira -1 a cada ação da peça.
+        printf("Direita\n");
+    }   
+}
 
+void movimentorainha(int numero)
+{
+    if (numero >=1)
+    {
+        movimentorainha(numero -1);
+        printf("Esquerda\n");
+    }
+    
+}
 int main() {
     
     printf("Torre: \n");
 
-    // loop para mover a torre 5 casas para a direita.
-    for (int torre = 0; torre < 5; torre++)
-    {
-        printf("Direita\n");// printf para mostra a direção do movimento.
-    }
-
+    // loop recursividade da torre.
+    int torre = 5;
+    movimentotorre(torre);
+    
     printf("\n");
 
-    int bispo;// variável do bispo
+    int bispoV, bispoH;// variável do bispo
 
     printf("Bispo: \n");
-
-    while (bispo <= 5)// loop para mover o bispo 5 casas na diagonal.
+    // loop aninhado para o bispo se mover na diagonal.
+    for (bispoV = 1; bispoV <= 5; bispoV++)// loop para o bispo mover para cima 5 vezes.
     {
-        printf("Diagonal(Cima Direita)\n");// printf para mostra a direção do movimentação.
-        bispo++;
+        for (bispoH = 0; bispoH <= 1; bispoH++)// loop para o bispo mover uma vez.
+        {
+            printf("Direita ");// printf para o movimento do bispo.
+            break;
+        }
+        printf("Cima\n");// printf para o movimento do bispo.
     }
+    
 
     printf("\n");
 
-    int rainha;// variável da rainha.
-
+    int rainha = 8;// variável da rainha.
+    // recursividade para a rainha.
     printf("Rainha: \n");
-
-    do// loop para mover a rainha 8 casas para a esquerda.
-    {
-        printf("Esquerda\n");// printf do movimento da rinha.
-        rainha++;
-    } while (rainha <= 7);
+    movimentorainha(rainha);
 
     printf("\n");
 
