@@ -37,6 +37,23 @@ int main() {
         printf("Esquerda\n");// printf do movimento da rinha.
         rainha++;
     } while (rainha <= 7);
+
+    printf("\n");
+
+    printf("Cavalo: \n");
+
+    // loop aninhados para o cavalo.
+    for (int cavalo = 0; cavalo < 1; cavalo++)// loop para o cavalo ir para a esquerda uma vez.
+    {
+        do//loop para o cavalo ir para baixo 2 vezes.
+        {
+            printf("Baixo\n");// printf do movimento do cavalo.
+            cavalo++;
+        } while (cavalo <= 1);
+
+        printf("Esquerda\n");// printf do movimento do cavalo.
+        
+    }
     
     
     
