@@ -5,28 +5,40 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    
+    printf("Torre: \n");
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // loop para mover a torre 5 casas para a direita.
+    for (int torre = 0; torre < 5; torre++)
+    {
+        printf("Direita\n");// printf para mostra a direção do movimento.
+    }
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    printf("\n");
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    int bispo;// variável do bispo
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Bispo: \n");
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    while (bispo <= 5)// loop para mover o bispo 5 casas na diagonal.
+    {
+        printf("Diagonal(Cima Direita)\n");// printf para mostra a direção do movimentação.
+        bispo++;
+    }
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    printf("\n");
 
+    int rainha;// variável da rainha.
+
+    printf("Rainha: \n");
+
+    do// loop para mover a rainha 8 casas para a esquerda.
+    {
+        printf("Esquerda\n");// printf do movimento da rinha.
+        rainha++;
+    } while (rainha <= 7);
+    
+    
+    
     return 0;
 }
